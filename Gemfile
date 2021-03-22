@@ -4,21 +4,24 @@ source "https://rubygems.org"
 
 git_source(:github) {|repo_name| "https://github.com/#{repo_name}" }
 
-gem "sqlite3"
+gem "sqlite3", "~> 1.4"
 
-gem "activerecord"
+gem "activerecord", "~> 6.1"
 
-gem "sinatra"
+gem "rake", "~> 13.0"
 
-gem "rake"
+gem "pry", "~> 0.14.0"
 
-gem "pry"
+gem "sinatra-activerecord", "~> 2.0"
 
-gem "sinatra-activerecord"
+gem "require_all", "~> 3.0"
 
-gem "shotgun"
+gem "bcrypt", "~> 3.1"
 
-gem "require_all"
+gem "sinatra", "~> 2.1"
 
+gem "dotenv", "~> 2.7"
+
+gem "shotgun", "~> 0.9.2"
 
 # gem "rails"
