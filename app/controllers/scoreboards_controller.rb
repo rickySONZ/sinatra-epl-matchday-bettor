@@ -1,8 +1,14 @@
 class ScoreboardController < ApplicationController
 
+    get '/' do 
+        redirect_if_not_logged_in
+        @scoreboards = current_user.scoreboards
+        erb :"/scoreboards/index"
+    end
+
     get '/scoreboards' do
         redirect_if_not_logged_in
-        erb :index
+        erb :"/scoreboards/index"
     end
 
     get "/scoreboards/new" do

@@ -1,0 +1,5 @@
+<ul>
+<% @scoreboards.each do |s| %>
+    <li><a href= "/scoreboards/<%= s.id %>"> <%= s.name %></a></li>
+    <% end %>
+    </ul>
