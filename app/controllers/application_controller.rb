@@ -7,6 +7,7 @@ class ApplicationController < Sinatra::Base
         set :session_secret, 'fnowiengowiegjpfoq4gn3ogi3o4bgo'
     end
 
+
     helpers do 
         def current_user
             @current_user ||= User.find_by_id(session["user_id"])

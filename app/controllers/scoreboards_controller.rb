@@ -49,6 +49,15 @@ class ScoreboardController < ApplicationController
         end
     end
 
+    delete "/scoreboards/:id" do
+        @scoreboard = Scoreboard.find_by_id(params[:id])
+        redirect_if_not_logged_in
+
+        @scoreboard.destroy
+
+        redirect "/"
+    end
+
 
     
 
