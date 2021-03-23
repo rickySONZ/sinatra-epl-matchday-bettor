@@ -1,0 +1,9 @@
+<h4> Current Prediction </h4>
+
+<%= @scoreboard.name %> <br>
+
+<form action = "/scoreboards/<%= @scoreboard.id %>" method = "POST">
+    <input type="hidden" name="_method" value="patch">
+    <textarea type="text" name = "scoreboard[name]" value="<%= @scoreboard.name %>"></textarea><br>
+    <input type = "submit" value = "Update Predictions">
+    </form>
