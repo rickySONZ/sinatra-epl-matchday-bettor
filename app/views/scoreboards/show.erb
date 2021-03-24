@@ -1,6 +1,7 @@
 <p><%= @scoreboard.name %></p>
 
-<input type = "submit" onclick="window.location='/scoreboards/<%= @scoreboard.id %>/edit';" value="Edit Prediction">
+<input type = "submit" onclick="window.location='/scoreboards';" value="Go Back To Home"><br><br><br>
+<input type = "submit" onclick="window.location='/scoreboards/<%= @scoreboard.id %>/edit';" value="Edit Prediction"><br><br><br>
 <form action="/scoreboards/<%= @scoreboard.id %>" method = "post">
     <input type = "hidden" name = "_method" value = "delete">
     <input type="submit" value = "Delete Prediction">

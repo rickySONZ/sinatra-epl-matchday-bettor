@@ -19,6 +19,15 @@ class UsersController < ApplicationController
         end
     end
 
+    get "/addfriends" do
+        redirect_if_not_logged_in
+
+        @users = User.all
+
+        erb :"/users/add_friends"
+    end
+
+
 
 
 end
