@@ -1,1 +1,8 @@
 <h4><%= @user.email %></h4>
+
+<% if following? == false %>
+<form action="/users/<%= @user.id %>/follow" method = "post">
+    <input type="submit" value = "Follow Account">
+    </form>
+
+    <% end %>

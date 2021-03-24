@@ -30,6 +30,14 @@ class UsersController < ApplicationController
         @users = User.all
         erb :"/users/index"
     end
+
+
+    helpers do 
+        def following?
+            user = User.find_by_id(params[:id])
+            current_user.following.include?(user)
+        end
+    end
         
 
 end
