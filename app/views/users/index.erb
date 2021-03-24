@@ -1,0 +1,4 @@
+<% @users.each do |user| %>
+    <% next if user.id == session["user_id"] %>
+    <a href="/users/<%= user.id %>" > <%= user.email %></a><br><br>
+    <% end %>

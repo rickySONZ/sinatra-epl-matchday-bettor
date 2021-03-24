@@ -19,15 +19,17 @@ class UsersController < ApplicationController
         end
     end
 
-    get "/addfriends" do
+    get "/users/:id" do
         redirect_if_not_logged_in
-
-        @users = User.all
-
-        erb :"/users/add_friends"
+        @user = User.find_by_id(params[:id])
+        erb :"/users/show"
     end
 
-
-
+    get "/users" do
+        redirect_if_not_logged_in
+        @users = User.all
+        erb :"/users/index"
+    end
+        
 
 end
