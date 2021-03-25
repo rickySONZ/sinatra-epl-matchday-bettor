@@ -1,5 +1,13 @@
+<h3>Your Scoreboards</h3>
 <ul>
 <% @scoreboards.each do |s| %>
     <li><a href= "/scoreboards/<%= s.id %>"> <%= s.name %></a></li>
     <% end %>
     </ul>
+
+<h3>Accounts You Follow</h3>
+<ul>
+    <% current_user.following.each do |u| %>
+        <li><a href = "/users/<%= u.id %>"><%= u.email %></a></li>
+        <% end %>
+        </ul>
