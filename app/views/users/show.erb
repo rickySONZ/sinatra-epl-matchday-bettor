@@ -9,7 +9,7 @@
     <h5><%= @user.email %>'s Scoreboards</h5>
     <ul>
     <% @user.scoreboards.each do |scoreboard| %>
-        <li><a href = "/scoreboard/<%= scoreboard.id %>"><%= scoreboard.name %></a></li>
+        <li><a href = "/scoreboards/<%= scoreboard.id %>"><%= scoreboard.name %></a></li>
         <% end %>
     <form action="/users/<%= @user.id %>/unfollow" method = "post">
     <input type="submit" value = "Unfollow Account">

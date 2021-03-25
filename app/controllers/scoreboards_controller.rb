@@ -23,13 +23,12 @@ class ScoreboardController < ApplicationController
     if scoreboard.save
         redirect "/scoreboards/#{scoreboard.id}"
     else
-        "Error"
+        redirect "/scoreboards/new"
     end
     end
 
     get "/scoreboards/:id" do
         redirect_if_not_logged_in
-        redirect_if_not_authorized
         @scoreboard = Scoreboard.find_by_id(params[:id])
         erb :"/scoreboards/show"
     end
@@ -55,6 +54,7 @@ class ScoreboardController < ApplicationController
     delete "/scoreboards/:id" do
         @scoreboard = Scoreboard.find_by_id(params[:id])
         redirect_if_not_logged_in
+        redirect_if_not_authorized
 
         @scoreboard.destroy
 
@@ -68,6 +68,11 @@ class ScoreboardController < ApplicationController
         if @scoreboard.user_id != session["user_id"]
            redirect "/"
         end
+    end
+
+    def not_authorized
+        @scoreboard = Scoreboard.find_by_id(params[:id])
+        @scoreboard.user_id != session["user_id"]
     end
 
 

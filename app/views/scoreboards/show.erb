@@ -1,8 +1,21 @@
-<p><%= @scoreboard.name %></p>
+<h2><%= @scoreboard.name %></h2>
+<p><%= @scoreboard.game1 %></p>
+<p><%= @scoreboard.game2 %></p>
+<p><%= @scoreboard.game3 %></p>
+<p><%= @scoreboard.game4 %></p>
+<p><%= @scoreboard.game5 %></p>
+<p><%= @scoreboard.game6 %></p>
+<p><%= @scoreboard.game7 %></p>
+<p><%= @scoreboard.game8 %></p>
+<p><%= @scoreboard.game9 %></p>
+<p><%= @scoreboard.game10 %></p>
+
 
 <input type = "submit" onclick="window.location='/scoreboards';" value="Go Back To Home"><br><br><br>
+<% if !not_authorized %>
 <input type = "submit" onclick="window.location='/scoreboards/<%= @scoreboard.id %>/edit';" value="Edit Prediction"><br><br><br>
 <form action="/scoreboards/<%= @scoreboard.id %>" method = "post">
     <input type = "hidden" name = "_method" value = "delete">
     <input type="submit" value = "Delete Prediction">
     </form>
+    <% end %>

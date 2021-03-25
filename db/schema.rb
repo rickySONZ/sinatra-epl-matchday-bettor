@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2021_03_24_195112) do
+ActiveRecord::Schema.define(version: 2021_03_25_163202) do
 
   create_table "follows", force: :cascade do |t|
     t.integer "user_id"
@@ -22,6 +22,16 @@ ActiveRecord::Schema.define(version: 2021_03_24_195112) do
   create_table "scoreboards", force: :cascade do |t|
     t.string "name"
     t.integer "user_id"
+    t.string "game1"
+    t.string "game2"
+    t.string "game3"
+    t.string "game4"
+    t.string "game5"
+    t.string "game6"
+    t.string "game7"
+    t.string "game8"
+    t.string "game9"
+    t.string "game10"
     t.index ["user_id"], name: "index_scoreboards_on_user_id"
   end
 
