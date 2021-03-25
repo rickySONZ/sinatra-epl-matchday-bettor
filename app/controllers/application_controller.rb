@@ -5,6 +5,7 @@ class ApplicationController < Sinatra::Base
         set :public_folder, 'public'
         enable :sessions
         set :session_secret, ENV['SESSION_SECRET']
+        use Rack::Flash, :sweep => true
     end
 
 

@@ -1,9 +1,9 @@
 
 require "bundler/setup"
 Bundler.require
+require 'dotenv/load'
+require 'rack-flash'
 
-require 'sinatra/activerecord'
-require "sinatra/activerecord/rake"
 
 set :database, ({
     :adapter => "sqlite3",

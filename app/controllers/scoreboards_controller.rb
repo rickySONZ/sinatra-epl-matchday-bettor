@@ -23,6 +23,7 @@ class ScoreboardController < ApplicationController
     if scoreboard.save
         redirect "/scoreboards/#{scoreboard.id}"
     else
+        flash[:error] = "#{scoreboard.errors.full_messages.join(", ")}"
         redirect "/scoreboards/new"
     end
     end
@@ -47,6 +48,7 @@ class ScoreboardController < ApplicationController
         if @scoreboard.update(params["scoreboard"])
             redirect "/scoreboards/#{@scoreboard.id}"
         else
+            flash[:error] = "#{scoreboard.errors.full_messages.join(", ")}"
             redirect "/scoreboards/#{@scoreboard.id}/edit"
         end
     end
@@ -64,8 +66,8 @@ class ScoreboardController < ApplicationController
     private
 
     def redirect_if_not_authorized
-        @scoreboard = Scoreboard.find_by_id(params[:id])
-        if @scoreboard.user_id != session["user_id"]
+        scoreboard = Scoreboard.find_by_id(params[:id])
+        if scoreboard == nil || scoreboard.user_id != session["user_id"]
            redirect "/"
         end
     end
