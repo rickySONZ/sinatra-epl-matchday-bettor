@@ -24,4 +24,4 @@ gem "dotenv", "~> 2.7"
 
 gem "shotgun", "~> 0.9.2"
 
-# gem "rails"
+gem "rack-flash3", "~> 1.0"
