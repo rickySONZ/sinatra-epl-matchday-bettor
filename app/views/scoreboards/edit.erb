@@ -1,21 +1,20 @@
-<h4> Current Prediction </h4>
-
-<%= @scoreboard.name %> <br>
+<h4><%= @scoreboard.name %></h4>
+<p>If you would like to edit your prediction for <%= @scoreboard.name %> please do so below.</p>
 
 <form action = "/scoreboards/<%= @scoreboard.id %>" method = "POST">
     <input type="hidden" name="_method" value="patch">
-    <p>Scoreboard Name: <input type="text" name = "scoreboard[name]" value="<%= @scoreboard.name %>"></p></textarea><br>
-    <p>Game 1: <input type="text" name = "scoreboard[game1]" value="<%= @scoreboard.game1 %>"></input></p><br><br>
-<p>Game 2: <input type="text" name = "scoreboard[game2]" value="<%= @scoreboard.game2 %>"></input></p><br><br>
-<p>Game 3: <input type="text" name = "scoreboard[game3]" value="<%= @scoreboard.game3 %>"></input></p><br><br>
-<p>Game 4: <input type="text" name = "scoreboard[game4]" value="<%= @scoreboard.game4 %>"></input></p><br><br>
-<p>Game 5: <input type="text" name = "scoreboard[game5]" value="<%= @scoreboard.game5 %>"></input></p><br><br>
-<p>Game 6: <input type="text" name = "scoreboard[game6]" value="<%= @scoreboard.game6 %>"></input></p><br><br>
-<p>Game 7: <input type="text" name = "scoreboard[game7]" value="<%= @scoreboard.game7 %>"></input></p><br><br>
-<p>Game 8: <input type="text" name = "scoreboard[game8]" value="<%= @scoreboard.game8 %>"></input></p><br><br>
-<p>Game 9: <input type="text" name = "scoreboard[game9]" value="<%= @scoreboard.game9 %>"></input></p><br><br>
-<p>Game 10: <input type="text" name = "scoreboard[game10]" value="<%= @scoreboard.game9 %>"></input></p><br><br>
+    <p>Scoreboard Name: <input type="text" name = "scoreboard[name]" value="<%= @scoreboard.name %>"></p></textarea>
+    <p>Game 1: <input type="text" name = "scoreboard[game1]" value="<%= @scoreboard.game1 %>"></input></p>
+<p>Game 2: <input type="text" name = "scoreboard[game2]" value="<%= @scoreboard.game2 %>"></input></p>
+<p>Game 3: <input type="text" name = "scoreboard[game3]" value="<%= @scoreboard.game3 %>"></input></p>
+<p>Game 4: <input type="text" name = "scoreboard[game4]" value="<%= @scoreboard.game4 %>"></input></p>
+<p>Game 5: <input type="text" name = "scoreboard[game5]" value="<%= @scoreboard.game5 %>"></input></p>
+<p>Game 6: <input type="text" name = "scoreboard[game6]" value="<%= @scoreboard.game6 %>"></input></p>
+<p>Game 7: <input type="text" name = "scoreboard[game7]" value="<%= @scoreboard.game7 %>"></input></p>
+<p>Game 8: <input type="text" name = "scoreboard[game8]" value="<%= @scoreboard.game8 %>"></input></p>
+<p>Game 9: <input type="text" name = "scoreboard[game9]" value="<%= @scoreboard.game9 %>"></input></p>
+<p>Game 10: <input type="text" name = "scoreboard[game10]" value="<%= @scoreboard.game9 %>"></input></p>
     <input type = "submit" value = "Update Predictions">
-    </form>
+    </form><br>
 
     <input type = "submit" onclick="window.location='/scoreboards';" value="Go Back To Home">

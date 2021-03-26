@@ -1,4 +1,11 @@
+<h4>EPL Matchday Bettor</h4>
+<h5>User List</h5>
+<p>Please click on an account to follow them in order to view their scoreboards/predictions!</p>
+<p>You may unfollow an account at anytime. Click the button below to go back to your homepage.</p>
+<input type = "submit" onclick="window.location='/scoreboards';" value="Go Back To Home">
+<ul>
 <% @users.each do |user| %>
     <% next if user.id == session["user_id"] %>
-    <a href="/users/<%= user.id %>" > <%= user.email %></a><br><br>
+    <li><a href="/users/<%= user.id %>" > <%= user.email %></a></li>
     <% end %>
+</ul>

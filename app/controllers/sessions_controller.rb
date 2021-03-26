@@ -15,6 +15,7 @@ class SessionsController < ApplicationController
             session["user_id"] = user.id
             redirect "/"
         else
+            
             redirect "/login"
         end
     end
