@@ -2,7 +2,7 @@
 
 <h5>Your Scoreboards</h5>
 <p>Click on one of your scoreboards to edit or delete the scoreboard.<p>
-<p>To create a new scoreboard please go to New Weekly Scoreboard</p>
+<p>To create a new scoreboard please go to New Weekly Scoreboard.</p>
 <ul>
 <% @scoreboards.each do |s| %>
     <li><a href= "/scoreboards/<%= s.id %>"> <%= s.name %></a></li>
@@ -11,7 +11,7 @@
 
 <h5>Accounts You Follow</h5>
 <p>Listed below are the accounts you follow. Click on one of them to access their scoreboards, or to unfollow an account.<p>
-<p>If you would like to follow an account that is not listed below, please click on users to view all other users</p>
+<p>If you would like to follow an account that is not listed below, please click on users to view all other users.</p>
 <ul>
     <% current_user.following.each do |u| %>
         <li><a href = "/users/<%= u.id %>"><%= u.email %></a></li>
