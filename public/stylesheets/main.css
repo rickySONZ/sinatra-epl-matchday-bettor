@@ -1,6 +1,8 @@
 .page-bg{
-    background-image: url("../images/stadium7.jpeg");
-    background-size: cover;
+    background-image: url("../images/ucl.jpeg");
+    background-size: 100%;
+    background-position: center 40%;
+   
 }
 
 .nav-bar {
@@ -35,3 +37,6 @@ a:hover {
     color: purple;
 }
 
+.logsign {
+    text-align: center;
+}
