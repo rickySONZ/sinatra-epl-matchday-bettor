@@ -40,17 +40,7 @@ a:hover {
     text-align: center;
 }
 
-input[type=submit] {
-    background-color:  rgb(69, 116, 202);
-    border: none;
-    border-radius: 25px;
-    color: white;
-    padding: 5px 20px;
-    text-decoration: none;
-    cursor: pointer;
-  }
-
-  input[type=reset] {
+input[type=submit], input[type=reset] {
     background-color:  rgb(69, 116, 202);
     border: none;
     border-radius: 25px;
