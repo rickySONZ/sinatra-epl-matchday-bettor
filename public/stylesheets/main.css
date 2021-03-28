@@ -5,11 +5,6 @@
    
 }
 
-.nav-bar {
-    background-color: black;
-    
-}
-
 .container-sm {
  background-color: rgba(255, 255, 255, 0.863);
  border-radius: 25px;
@@ -48,4 +43,10 @@ input[type=submit], input[type=reset] {
     padding: 5px 20px;
     text-decoration: none;
     cursor: pointer;
+  }
+
+  input[type=text], input[type=email], input[type=password], input[type=password_confirmation] {
+      border-radius: 10px;
+        width: 45%;
+      border-color: rgb(69, 116, 202);
   }
