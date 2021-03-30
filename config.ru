@@ -1,6 +1,6 @@
 require "./config/environment"
 
-use Rack::MethodOverride
+use Rack::MethodOverride #supports patch and delete
 
 use FollowsController
 use ScoreboardController

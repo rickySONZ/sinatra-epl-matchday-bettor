@@ -1,7 +1,11 @@
 <h4>EPL Matchday Bettor</h4>
 
 <h5>Your Scoreboards</h5>
+<% if @scoreboards.empty? %>
+<p>You currently have no scoreboards </p>
+<% else %>
 <p>Click on one of your scoreboards to edit or delete the scoreboard.<p>
+<% end %>
 <p>To create a new scoreboard please go to New Weekly Scoreboard.</p>
 <ul>
 <% @scoreboards.each do |s| %>
